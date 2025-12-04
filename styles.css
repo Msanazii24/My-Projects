@@ -1,0 +1,144 @@
+header{
+	height: 150px;
+	box-shadow: 4px 2px 2px black;
+	border: solid;
+	border-radius: 10px;
+	background: linear-gradient(45deg, #667eea, #764ba2, #667eea, #764ba2);
+    background-size: 400% 400%;
+    animation: gradientFlow 8s ease infinite;
+	
+}
+
+#titre{
+	position: absolute;
+	top: 35px;
+	left: 650px;
+	background: linear-gradient(
+    to right,
+    #ff0000,
+    #ff7f00,
+    #ffff00,
+    #00ff00,
+    #0000ff,
+    #4b0082,
+    #9400d3
+  );
+ background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: transform 0.3s ease;
+  animation: rainbow 3s linear infinite;
+	
+}
+#titre:hover{
+	 transform: scale(1.5);
+}
+@keyframes rainbow {
+  to {
+    background-position: 200% center;
+  }
+}
+#icon{
+	height: 80px;
+	position: absolute;
+	top: 50px;
+	right: 50px;
+	border-radius: 50px;
+	transition: transform 0.3s ease;
+}
+#icon:hover{
+	transform: scale(1.5);
+	
+}
+@keyframes gradientFlow {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+nav{
+	width: 150px;
+	position: relative;
+	top: 130px;
+	left: 630px;
+	
+}
+a {
+  display: inline-block;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  color: yellow;
+  
+  font-size: 16px;
+  font-weight: 500;
+  background:
+   linear-gradient(
+    to right,
+    #ff0000,
+    #ff7f00,
+    #ffff00,
+    #00ff00,
+    #0000ff,
+    #4b0082,
+    #9400d3
+  );
+ background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: transform 0.3s ease;
+  animation: rainbow 3s linear infinite;
+}
+
+a:hover {
+  transform: translateY(-8px) scale(1.15);
+  color: #ff6b6b;
+  text-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+main{
+	
+	margin-top: 10px;
+	height: 470px;
+}
+footer{
+	border: solid;
+	border-radius: 10px;
+	background: linear-gradient(45deg, #667eea, #764ba2, #667eea, #764ba2);
+    background-size: 400% 400%;
+    animation: gradientFlow 8s ease infinite;
+	height: 70px;
+	margin-top: 10px;
+	
+}
+iframe{
+	height: 470px;
+	width: 80%;
+}
+aside{
+	height: 100%;
+	width: 19%;
+	float: right;
+	overflow-y: scroll;
+  	overflow-x: hidden;
+	border-radius: 10px;
+	
+}
+aside img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+aside img:hover {
+  transform: scale(1.05);
+}

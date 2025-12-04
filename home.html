@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Books Collection</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 40px 20px;
+            min-height: 100vh;
+        }
+
+        h1 {
+            text-align: center;
+            background: -webkit-linear-gradient(left, #ff0000, #ff7f00, #ffff00, #00ff00, #0000ff, #4b0082, #9400d3);
+            background: -o-linear-gradient(left, #ff0000, #ff7f00, #ffff00, #00ff00, #0000ff, #4b0082, #9400d3);
+            background: linear-gradient(to right, #ff0000, #ff7f00, #ffff00, #00ff00, #0000ff, #4b0082, #9400d3);;
+ 	background-size: 200% auto;
+  	-webkit-background-clip: text;
+  	background-clip: text;
+  	-webkit-text-fill-color: transparent;
+  	transition: transform 0.3s ease;
+  	animation: rainbow 3s linear infinite;
+	
+            font-size: 3em;
+            margin-bottom: 50px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .books-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .book-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            transition: all 0.4s ease;
+            animation: fadeInUp 0.6s ease forwards;
+            opacity: 0;
+        }
+
+        .book-card:nth-child(1) { animation-delay: 0.1s; }
+        .book-card:nth-child(2) { animation-delay: 0.2s; }
+        .book-card:nth-child(3) { animation-delay: 0.3s; }
+        .book-card:nth-child(4) { animation-delay: 0.4s; }
+        .book-card:nth-child(5) { animation-delay: 0.5s; }
+        .book-card:nth-child(6) { animation-delay: 0.6s; }
+
+        .book-card:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+        }
+
+        .book-image {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            transition: transform 0.4s ease;
+        }
+
+        .book-card:hover .book-image {
+            transform: scale(1.1);
+        }
+
+        .book-info {
+            padding: 25px;
+        }
+
+        .book-title {
+            font-size: 1.8em;
+            color: #333;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        .book-author {
+            color: #667eea;
+            font-size: 1.1em;
+            margin-bottom: 15px;
+            font-style: italic;
+        }
+
+        .book-description {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .book-details {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+            font-size: 0.9em;
+            color: #888;
+        }
+
+        .read-button {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            padding: 12px 30px;
+            border-radius: 25px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .read-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+		@keyframes rainbow {
+  to {
+    background-position: 200% center;
+  }
+}
+    </style>
+</head>
+<body>
+    <h1>📚 My Books Collection</h1>
+    
+    <div class="books-container">
+        <!-- Book 1 -->
+        <div class="book-card">
+            <img src="book1.jpg" alt="Book 1" class="book-image">
+            <div class="book-info">
+                <h2 class="book-title">The Mystery Garden</h2>
+                <p class="book-author">by John Smith</p>
+                <p class="book-description">
+                    A captivating tale of adventure and discovery in a hidden magical garden where nothing is as it seems.
+                </p>
+                <div class="book-details">
+                    <span>Pages: 320</span>
+                    <span>Year: 2023</span>
+                </div>
+                <a href="book1.html" target="reading-frame" class="read-button">Read Now</a>
+            </div>
+        </div>
+
+        <!-- Book 2 -->
+        <div class="book-card">
+            <img src="book2.jpg" alt="Book 2" class="book-image">
+            <div class="book-info">
+                <h2 class="book-title">Digital Dreams</h2>
+                <p class="book-author">by Sarah Johnson</p>
+                <p class="book-description">
+                    Explore the future of technology and humanity in this thought-provoking science fiction masterpiece.
+                </p>
+                <div class="book-details">
+                    <span>Pages: 285</span>
+                    <span>Year: 2024</span>
+                </div>
+                <a href="book2.html" target="reading-frame" class="read-button">Read Now</a>
+            </div>
+        </div>
+
+        <!-- Book 3 -->
+        <div class="book-card">
+            <img src="book3.jpg" alt="Book 3" class="book-image">
+            <div class="book-info">
+                <h2 class="book-title">Ocean's Whisper</h2>
+                <p class="book-author">by Michael Chen</p>
+                <p class="book-description">
+                    Dive deep into an underwater adventure filled with mystery, danger, and the secrets of the ocean.
+                </p>
+                <div class="book-details">
+                    <span>Pages: 410</span>
+                    <span>Year: 2023</span>
+                </div>
+                <a href="book3.html" target="reading-frame" class="read-button">Read Now</a>
+            </div>
+        </div>
+
+        <!-- Book 4 -->
+        <div class="book-card">
+            <img src="book4.jpg" alt="Book 4" class="book-image">
+            <div class="book-info">
+                <h2 class="book-title">Mountain Echoes</h2>
+                <p class="book-author">by Emma Williams</p>
+                <p class="book-description">
+                    A heartwarming story of self-discovery and adventure set against breathtaking mountain landscapes.
+                </p>
+                <div class="book-details">
+                    <span>Pages: 350</span>
+                    <span>Year: 2024</span>
+                </div>
+                <a href="book4.html" target="reading-frame" class="read-button">Read Now</a>
+            </div>
+        </div>
+
+        <!-- Book 5 -->
+        <div class="book-card">
+            <img src="book5.jpg" alt="Book 5" class="book-image">
+            <div class="book-info">
+                <h2 class="book-title">Starlight Chronicles</h2>
+                <p class="book-author">by David Martinez</p>
+                <p class="book-description">
+                    Journey through the cosmos in this epic space opera filled with action, romance, and cosmic mysteries.
+                </p>
+                <div class="book-details">
+                    <span>Pages: 480</span>
+                    <span>Year: 2023</span>
+                </div>
+                <a href="book5.html" target="reading-frame" class="read-button">Read Now</a>
+            </div>
+        </div>
+
+        <!-- Book 6 -->
+        <div class="book-card">
+            <img src="book6.jpg" alt="Book 6" class="book-image">
+            <div class="book-info">
+                <h2 class="book-title">The Last Recipe</h2>
+                <p class="book-author">by Lisa Anderson</p>
+                <p class="book-description">
+                    A delicious mystery involving family secrets, culinary arts, and a recipe that could change everything.
+                </p>
+                <div class="book-details">
+                    <span>Pages: 295</span>
+                    <span>Year: 2024</span>
+                </div>
+                <a href="book6.html" target="reading-frame" class="read-button">Read Now</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
