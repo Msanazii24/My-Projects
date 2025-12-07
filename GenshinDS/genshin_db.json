@@ -1,0 +1,23 @@
+{
+  "patches": {
+    "6.0": "2025-09-10",
+    "6.1": "2025-10-22",
+    "6.2": "2025-12-03",
+    "6.3": "2026-01-14",
+    "6.4": "2026-02-26"
+  },
+  "defaults": {
+    "daily_per_day": 60,
+    "patch_length_days": 42,
+    "abyss_reset": 600,
+    "imaginary": 600,
+    "new_mod": 450,
+    "monthly_reset": 600,
+    "story_quest": 60,
+    "character_quest": 60,
+    "new_map_bonus": 2000,
+    "welkin_daily": 90,
+    "welkin_bonus": 300,
+    "battle_pass": 680
+  }
+}
