@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>TM - Traitement</title>
+		<script type="text/javascript" src="controles.js"></script>
+		<link href="style.css" rel="stylesheet" type="text/css">
+	</head>
+	<body>
+		<form action="traitement.php" method="post" onSubmit="return verif2()">
+			<h1>Traitement d'une reclamation</h1>
+			<table border="0">
+				<tr>
+					<th>
+						<label for="tel">Tel. Client:</label>
+					</th>
+					<td>
+					     <input type="text" name="tel" id="tel">
+					</td>
+				</tr>
+				<tr>
+					<th>
+						<label for="daterep">Date Réparations:</label>
+					</th>
+					<td>
+					    <input type="text" name="daterep" id="daterep">					
+					</td>
+				</tr>
+				<tr>
+					<th colspan="2">
+						<input type="submit" name="submit" id="submit" value="Valider">
+						<input type="reset" name="reset" id="reset" value="Annuler">
+					</th>
+				</tr>
+			</table>
+		</form>
+	</body>
+</html>

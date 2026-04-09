@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>TM - Ajouter une réclamation</title>
+		<script type="text/javascript" src="controles.js"></script>
+	</head>
+	<body>
+		<form id="form1" name="form1" method="post" onSubmit="return verif()" action="ajout.php">
+			<h1>Ajout d'une reclamation:</h1>
+			<table>
+				<tr>
+					<th><label for="tel">Tel. Client:</label></th>
+					<td><input type="text" name="tel" id="tel"></td>
+				</tr>
+				<tr>
+					<th><label>Genre:</label></th>
+					<td>
+						<label>
+							<input name="genre" type="radio" id="genre_0" value="H" checked="checked">Homme
+						</label>
+						<label>
+							<input type="radio" name="genre" value="F" id="genre_1">Femme
+						</label>
+					</td>
+				</tr>
+				<tr>
+					<th>
+						<label for="cat">Catégorie:</label>
+					</th>
+					<td>
+					  <select name="cat" id="cat">
+							<option value="0">Choisir une catégorie</option>
+							<option value="1">Authentification</option>
+							<option value="2">Branchement</option>
+							<option value="3">Synchronisation</option>
+							<option value="4">Autres</option>
+					  </select>
+					</td>
+				</tr>
+				<tr>
+					<th>
+						<label for="desc">description:</label>
+					</th>
+					<td>
+						  <textarea name="desc" id="desc"></textarea>
+					</td>
+				</tr>
+				<tr>
+					<th colspan="2">
+						<input type="submit" name="submit" id="submit" value="Valider">
+						<input type="reset" name="reset" id="reset" value="Rétablir">
+					</th>
+				</tr>
+			</table>
+
+		</form>
+	</body>
+</html>
