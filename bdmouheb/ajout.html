@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<link href="mesStyles.css" rel="stylesheet" type="text/css">
+<script src="mesControles.js"></script>
+
+
+</head>
+
+<body>
+	<form action="ajout.php" onSubmit="return trajet()">
+		<fieldset>
+			<legend>Nouveau trajet</legend>
+			<label for=""> Adresse de départ : </label><input type="text" id="ad"> <label for=""> Adresse d'arrivée : </label><input type="text" id="aa"><br>
+			<label for=""> Date de depart : </label><input type="date" id="ddd"><label for=""> Heure de depart : </label><input type="time" id="hdd"><br>
+			<label for=""> Prix : </label><input type="number" id="prix"> <br>
+			<label for=""> N°d'immatriculation : </label><input type="text" id="nimm"><label for=""> Mot de Passe : </label><input type="password" id="mdp"><br>
+			<input type="reset" value="Annuler"><input type="submit" value="Enregistrer">
+		</fieldset>
+	</form>
+</body>
+</html>
